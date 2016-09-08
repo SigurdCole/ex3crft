@@ -11,6 +11,10 @@ class Character
     @stats[:wxp]||= 1
     @stats[:motes]||= 1
     @stats[:wp]||= 1
+    @stats[:hl0]||= 1
+    @stats[:hl1]||= 1
+    @stats[:hl2]||= 1
+    @stats[:hl4]||= 1
   end
   
   def essence
@@ -43,6 +47,22 @@ class Character
   
   def wp
     @stats[:wp]
+  end
+  
+  def hl0
+    @stats[:hl0]
+  end
+  
+  def hl1
+    @stats[:hl1]
+  end
+  
+  def hl2
+    @stats[:hl2]
+  end
+  
+  def hl4
+    @stats[:hl4]
   end
 
 end
