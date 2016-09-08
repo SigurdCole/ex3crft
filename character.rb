@@ -1,68 +1,22 @@
 class Character
   
+  attr_accessor :essence, :intelligence, :craft, :sxp, :gxp, :wxp, :motes, :wp, :hl0, :hl1, :hl2, :hl4
+  
   def initialize(charms = Hash.new, stats = Hash.new)
     charms.is_a?(Hash) ? @charms = charms : @charms = Hash.new
     stats.is_a?(Hash) ? @stats = stats : @stats = Hash.new
-    @stats[:essence] ||= 1
-    @stats[:intelligence] ||= 1
-    @stats[:craft]||= 1
-    @stats[:sxp]||= 1
-    @stats[:gxp]||= 1
-    @stats[:wxp]||= 1
-    @stats[:motes]||= 1
-    @stats[:wp]||= 1
-    @stats[:hl0]||= 1
-    @stats[:hl1]||= 1
-    @stats[:hl2]||= 1
-    @stats[:hl4]||= 1
-  end
-  
-  def essence
-    @stats[:essence]
-  end
-  
-  def intelligence
-    @stats[:intelligence]
-  end
-  
-  def craft
-    @stats[:craft]
-  end
-
-  def sxp
-    @stats[:sxp]
-  end
-
-  def gxp
-    @stats[:gxp]
-  end
-
-  def wxp
-    @stats[:wxp]
-  end
-
-  def motes
-    @stats[:motes]
-  end
-  
-  def wp
-    @stats[:wp]
-  end
-  
-  def hl0
-    @stats[:hl0]
-  end
-  
-  def hl1
-    @stats[:hl1]
-  end
-  
-  def hl2
-    @stats[:hl2]
-  end
-  
-  def hl4
-    @stats[:hl4]
+    @essence = stats[:essence] ||= 1
+    @intelligence = stats[:intelligence] ||= 1
+    @craft = stats[:craft] ||= 1
+    @sxp = stats[:sxp] ||= 1
+    @gxp = stats[:gxp] ||= 1
+    @wxp = stats[:wxp] ||= 1
+    @motes = stats[:motes] ||= 1
+    @wp = stats[:wp] ||= 1
+    @hl0 = stats[:hl0] ||= 1
+    @hl1 = stats[:hl1] ||= 1
+    @hl2 = stats[:hl2] ||= 1
+    @hl4 = stats[:hl4] ||= 1
   end
 
 end
