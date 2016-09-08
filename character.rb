@@ -18,6 +18,23 @@ class Character
     @hl1 = stats[:hl1] ||= 2
     @hl2 = stats[:hl2] ||= 2
     @hl4 = stats[:hl4] ||= 1
-  end
+	@charms[:excellency] ||= false
+	@charms[:fhm] ||= false
+	@charms[:fhm2] ||= false
+	@charms[:tfe] ||= false
+	@charms[:smf] ||= false
+	@charms[:smf2] ||= false
+	@charms[:smf3] ||= false
+	@charms[:bfp] ||= false
+	@charms[:ecottv] ||= false
+	@charms[:uif] ||= false
+	@charms[:fmotd] ||= false
+	@charms[:efk] ||= false
+	@charms[:mem] ||= false
+	@charms[:irv] ||= false
+	@charms[:dit] ||= false
+	@charms[:hui] ||= false
+	@charms[:hmu] ||= false
+	end
 
 end

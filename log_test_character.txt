@@ -3,9 +3,11 @@ Essence 3, Intelligence 4, Craft 5
 Silver XP 11, Gold XP 12, White XP 13
 Willpower 6
 Health Levels: 1 -0, 2 -1, 2 -2, 1 -4,
+{:fhm=>true, :tfe=>true}
 
 Output Stats
 Essence 3, Intelligence 4, Craft 5
 Silver XP 11, Gold XP 12, White XP 13
 Personal Motes 19, Peripheral Motes 47, Willpower 6
 Health Levels: 1 -0, 2 -1, 2 -2, 1 -4,
+{:fhm=>true, :tfe=>true}
