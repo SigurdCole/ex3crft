@@ -3,11 +3,11 @@ Essence 3, Intelligence 4, Craft 5
 Silver XP 11, Gold XP 12, White XP 13
 Willpower 6
 Health Levels: 1 -0, 2 -1, 2 -2, 1 -4,
-{:fhm=>true, :tfe=>true}
+{:craft=>{:fhm=>true, :tfe=>true}}
 
 Output Stats
 Essence 3, Intelligence 4, Craft 5
 Silver XP 11, Gold XP 12, White XP 13
 Personal Motes 19, Peripheral Motes 47, Willpower 6
 Health Levels: 1 -0, 2 -1, 2 -2, 1 -4,
-{:fhm=>true, :tfe=>true}
+{:craft=>{:fhm=>true, :tfe=>true, :excellency=>false, :twm=>false, :ect=>false, :asp=>false, :scf=>false, :st=>false, :aew=>false, :dse=>false, :csc=>false, :cbp=>false, :sgi=>false, :spt=>false, :vmt=>false, :ugm=>false, :gfw=>false, :edf=>false, :sse=>false, :sht=>false, :wfg=>false, :dmp=>false, :bsf=>false, :rar=>false, :cfa=>false, :cnnt=>false, :ppc=>false, :spc=>false, :tfh=>false, :dtc=>false, :wwm=>false, :sg=>false, :det=>false, :cmt=>false, :thn=>false, :bds=>false, :ost=>false, :crp=>false, :bhm=>false, :dbl=>false, :tap=>false, :rfs=>false, :crt=>false, :fhm2=>false, :smf=>false, :smf2=>false, :smf3=>false, :bfp=>false, :ectv=>false, :uif=>false, :fmd=>false, :efk=>false, :mem=>false, :irv=>false, :dit=>false, :hui=>false, :hmu=>false}}
