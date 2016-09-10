@@ -15,13 +15,13 @@ puts
 
 test_character = Character.new(charms,stats)
 
-test_dicepool = DicePool.new(test_character[:charms], test_character[:stats])
+test_dicepool = DicePool.new(test_character.charms, test_character.stats)
 
-puts test.charms.to_s
-puts test.data.to_s
-puts test.successes
-puts test.motes
-puts test.sxp
-puts test.gxp
-puts test.wxp
-puts test.wp
+puts test_dicepool.charms.to_s
+puts test_dicepool.data.to_s
+puts test_dicepool.successes
+puts test_dicepool.motes
+puts test_dicepool.sxp
+puts test_dicepool.gxp
+puts test_dicepool.wxp
+puts test_dicepool.wp

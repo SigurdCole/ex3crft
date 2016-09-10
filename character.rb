@@ -1,7 +1,7 @@
 class Character
   
   attr_accessor :intelligence, :craft, :sxp, :gxp, :wxp, :wp, :hl0, :hl1, :hl2, :hl4
-  attr_reader :essence, :motes1, :motes2
+  attr_reader :essence, :motes1, :motes2, :charms, :stats
   
   def initialize(charms = Hash.new, stats = Hash.new)
     charms.is_a?(Hash) ? @charms = charms : @charms = Hash.new
@@ -21,6 +21,7 @@ class Character
     @hl4 = stats[:hl4] ||= 1
 	@charms.default = false
 	@charms[:craft].default = false
+	@stats.default = false
 	end
 
 end

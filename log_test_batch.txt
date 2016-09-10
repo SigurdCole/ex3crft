@@ -1,0 +1,15 @@
+Input Stats
+Essence 3, Intelligence 4, Craft 5
+Silver XP 11, Gold XP 12, White XP 13
+Willpower 6
+Health Levels: 1 -0, 2 -1, 2 -2, 1 -4,
+{:craft=>{:fhm=>true, :tfe=>true}}
+
+{:craft=>{:fhm=>true, :tfe=>true}, :excellency=>false, :ecottv=>false, :fhm=>false, :fhm2=>false, :smf=>false, :smf2=>false, :smf3=>false, :fmotd=>false, :uif=>false, :mem=>false, :dit=>false, :hmu=>false, :irv=>false}
+{:essence=>3, :intelligence=>4, :craft=>5, :sxp=>11, :gxp=>12, :wxp=>13, :wp=>6, :hl0=>1, :hl1=>2, :hl2=>2, :hl4=>1, :log=>false, :craft_skill=>1, :base_pool=>5}
+3
+5
+0
+0
+0
+0
