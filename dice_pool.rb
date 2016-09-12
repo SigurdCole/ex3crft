@@ -63,9 +63,7 @@ class DicePool
 		if charms[:smf3]
 			@motes -= 2
 			@wxp -= 1
-			end
-			else
-			if charms[:smf2]
+			elsif charms[:smf2]
 			@motes -= 5
 			@wp -= 1
 			@gxp -= 1
