@@ -57,29 +57,35 @@ class DicePool
 	end
 
 	def cost
-		@motes += @excellency
-		@motes += 6 if charms[:fhm]
-		@motes += 6 if charms[:fhm2]
-		if charms[:smf2]
-			@motes += 5
-			@wp += 1
-			@gxp += 1
+		@motes -= @excellency
+		@motes -= 6 if charms[:fhm]
+		@motes -= 6 if charms[:fhm2]
+		if charms[:smf3]
+			@motes -= 2
+			@wxp -= 1
+			end
+			else
+			if charms[:smf2]
+			@motes -= 5
+			@wp -= 1
+			@gxp -= 1
 		end
 		if charms[:ecottv]
-			@motes += 4
-			@gxp += 4
+			@motes -= 4
+			@gxp -= 4
 		end
 		if charms[:uif]
-			@motes += 3 * @uif
-			@gxp += @uif
+			@motes -= 3 * @uif
+			@gxp -= @uif
 		end
 		if charms[:mem]
-			@sxp += @data[:craft_skill]
+			@sxp -= @data[:craft_skill]
+			@wxp -= 1
 		end
 		if charms[:irv]
-			@motes += 12
-			@wp += 1
-			@wxp += 1
+			@motes -= 12
+			@wp -= 1
+			@wxp -= 1
 		end
 	end
 
