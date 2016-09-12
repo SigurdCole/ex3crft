@@ -215,12 +215,20 @@ class DicePool
 		when 7
 			@charms[:smf3] ? @total_successes += 2 : @total_successes += 1
 		when 8
-			@charms[:smf2] ? @total_successes += 2 : @total_successes += 1
+		if @charms[:smf3] = true
+			@total_successes += 2
+			elsif @charms [:smf2] = true
+			@total_successes += 2
+			else total_successes +=1
+			end
 		when 9
-			if @charms[:smf]
-				@total_successes += 2
-			else
-				@total_successes += 1
+		if @charms[:smf3] = true
+			@total_successes += 2
+			elsif @charms [:smf2] = true
+			@total_successes += 2
+			elsif @charms [:smf] = true
+			@total_successes += 2
+			else total_successes +=1
 			end
 		when 10
 			@total_successes += 2
