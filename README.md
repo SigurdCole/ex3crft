@@ -7,8 +7,7 @@ End goal: a program which will...
   - return the ten most likely outcomes, including probabilities (if none of the ten most likely are successful, returning the most likely successful one as well)
 
 Current steps
-  - implement cost for SMF3 (exclusive with SMF2)
   - unify terminology between Character and DicePool (e.g. "data" vs "stats")
-  - prioritize Charm usage within specific resources (e.g. motes, WP, gxp)
-  - distinguish between Charms received via input and Charms in use
-  - implement resource starvation
+  - use statistical research using DicePool to prioritize Charm usage within specific resources (e.g. motes, WP, gxp)
+  - add max_excellency, max_mem and max_uif variables so that DicePool can receive a maximum value for variable-cost Charms
+  - start working on Project class (resource management, compares roll results to 
