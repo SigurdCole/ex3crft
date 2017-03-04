@@ -26,7 +26,6 @@ Current premises/assumptions:
     - haven't done analysis yet to see if there are any specific cost/benefits that disagree
 
 Current steps
-  - unify terminology between Character and DicePool (e.g. "data" vs "stats")
   - add max_excellency, max_mem and max_uif variables so that DicePool can receive a maximum value for variable-cost Charms
   - work on Project class (compares roll results to target total successes in a given project)
   - refine outcome returns (grouping)
