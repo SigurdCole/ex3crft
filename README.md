@@ -20,6 +20,7 @@ Current steps
   - work on Project class (compares roll results to target total successes in a given project)
   - refine outcome returns (grouping)
   - use statistical research using DicePool to prioritize Charm usage within specific resources (e.g. motes, WP, gxp)
+    - note: Sublime Transference will make this complicated re:crafting XP
 
 End goal: a program which will...
 
