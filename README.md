@@ -7,6 +7,7 @@ Current status:
   - test_batch.rb instances test_dice_pool as a new DicePool using values from test_character
     - dice_pool.rb uses all possible Charms to the maximum extent possible (no budgeting) for a single roll
   - test_batch.rb displays the inputs and outcomes for a single roll, including crafting XP spent
+    - dice_pool.rb currently records resources (e.g. motes) spent, not resources remaining (budgeting not yet implemented)
 
 Current premises/assumptions:
   - it is generally optimal to use all Charms possible in a given roll
