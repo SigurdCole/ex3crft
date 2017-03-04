@@ -1,9 +1,12 @@
 # ex3crft
 
 Current status:
-  - reads values from character.rb Essence, Personal and Peripheral motes, Intelligence, Craft, available crafting XP and known Charms
-  - uses all possible Charms to the maximum extent possible (no budgeting)
-  - returns the most likely outcomes for a single roll in order, grouped by total number of successes and costs
+  - test_batch.rb calls character.rb and dice_pool.rb
+  - test.batch.rb displays hard-coded test values in readable text (Essence, Personal and Peripheral motes, Intelligence, Craft, available crafting XP and known Charms)
+  - test_batch.rb instances test_character as a new Character using hard-coded test values
+  - test_batch.rb instances test_dice_pool as a new DicePool using values from test_character
+    - dice_pool uses all possible Charms to the maximum extent possible (no budgeting) for a single roll
+  - test_batch.rb displays the inputs and outcomes for a single roll
 
 Current premises/assumptions:
   - it is generally optimal to use all Charms possible in a given roll
