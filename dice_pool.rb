@@ -1,17 +1,17 @@
 class DicePool
 
-	attr_reader :successes, :motes, :gxp, :sxp, :wxp, :wp, :charms, :data
+	attr_reader :successes, :motes, :gxp, :sxp, :wxp, :wp, :charms, :stats
 
-	def initialize( charms = Hash.new, data = Hash.new )
+	def initialize( charms = Hash.new, stats = Hash.new )
 		charms.is_a?(Hash) ? @charms = charms : @charms = Hash.new
-		data.is_a?(Hash) ? @data = data : @data = Hash.new
-		@data[:log] ||= false
-		@data[:essence] ||= 1
-		@data[:intelligence] ||= 1
-		@data[:craft_skill]||= 1
-		@data[:base_pool] ||= @data[:intelligence] + @data[:craft_skill]
+		stats.is_a?(Hash) ? @stats = stats : @stats = Hash.new
+		@stats[:log] ||= false
+		@stats[:essence] ||= 1
+		@stats[:intelligence] ||= 1
+		@stats[:craft]||= 1
+		@stats[:base_pool] ||= @stats[:intelligence] + @stats[:craft]
 		@charms.default = false
-		@excellency = @data[:intelligence] + @data[:craft_skill]
+		@excellency = @stats[:intelligence] + @stats[:craft]
 		@rerolls = Array.new
 		@pool = Array.new
 		@showing = Hash.new
@@ -23,7 +23,7 @@ class DicePool
 		@sxp = 0
 		@wxp = 0
 		@wp = 0
-		self.base_pool = @data[:base_pool]
+		self.base_pool = @stats[:base_pool]
 		log "#{@pool.count} size pool = #{@pool.to_s}"
 		log "showing = #{@showing.sort.to_s}"
 		log "uif = #{@uif}"
@@ -33,7 +33,7 @@ class DicePool
 	end
 
 	def log(*p)
-		puts p if @data[:log]
+		puts p if @stats[:log]
 	end
 
 	def successes
@@ -77,7 +77,7 @@ class DicePool
 			@gxp += @uif
 		end
 		if charms[:mem]
-			@sxp += @data[:craft_skill]
+			@sxp += @stats[:craft]
 			@wxp += 1
 		end
 		if charms[:irv]
@@ -90,7 +90,7 @@ class DicePool
 	def excellency
 		dice = @excellency
 		if charms[:mem]
-			dice += @data[:craft_skill]
+			dice += @stats[:craft]
 		end
 		return dice
 	end
@@ -131,9 +131,9 @@ class DicePool
 	end
 
 	def ecottv
-		pool = data[:essence]
-		if data[:essence] > 2
-			pool += data[:intelligence]
+		pool = stats[:essence]
+		if stats[:essence] > 2
+			pool += stats[:intelligence]
 		end
 		log "ecottv pool = #{pool}"
 		pool.downto(1) do
@@ -189,7 +189,7 @@ class DicePool
 		[7,8,9,10].each do |x|
 			temp += @showing[x] if @showing[x]
 		end
-		@uif = @data[:essence] + temp.count
+		@uif = @stats[:essence] + temp.count
 	end
 
 	def reroll(die)
