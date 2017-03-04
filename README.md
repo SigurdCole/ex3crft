@@ -5,7 +5,7 @@ Current status:
   - test.batch.rb displays hard-coded test values in readable text (Essence, Personal and Peripheral motes, Intelligence, Craft, available crafting XP and known Charms)
   - test_batch.rb instances test_character as a new Character using hard-coded test values
   - test_batch.rb instances test_dice_pool as a new DicePool using values from test_character
-    - dice_pool uses all possible Charms to the maximum extent possible (no budgeting) for a single roll
+    - dice_pool.rb uses all possible Charms to the maximum extent possible (no budgeting) for a single roll
   - test_batch.rb displays the inputs and outcomes for a single roll
 
 Current premises/assumptions:
