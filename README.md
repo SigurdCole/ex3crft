@@ -9,6 +9,17 @@ Current status:
   - test_batch.rb displays the inputs and outcomes for a single roll, including crafting XP spent
     - dice_pool.rb currently records resources (e.g. motes) spent, not resources remaining (budgeting not yet implemented)
 
+Currently implemented Charms (in order of appearance in text)
+  - Flawless Handiwork Method I/II
+  - Supreme Masterwork Focus I/II/III (doesn't check for project type yet)
+  - Experiential Conjuring of True Void
+  - Unbroken Image Focus
+  - First Movement of the Demiurge
+  - Mind-Expanding Meditation
+  - Inspiration-Renewing Vision
+  - Divine Inspiration Technique
+  - Holistic Miracle Understanding
+
 Current premises/assumptions:
   - it is generally optimal to use all Charms possible in a given roll
     - statistical (non-Monte Carlo) research has indicated that this is indeed optimal (many synergies)
