@@ -17,9 +17,4 @@ test_dicepool = DicePool.new(test_character.charms, test_character.stats)
 puts "Output Stats"
 puts test_dicepool.stats.to_s
 puts test_dicepool.charms.to_s
-puts test_dicepool.successes,test_dicepool.motes,test_dicepool.sxp,test_dicepool.gxp,test_dicepool.wxp,test_dicepool.wp
-puts 
-puts 
-puts 
-puts 
-puts 
+puts "#{test_dicepool.successes} #{test_dicepool.motes} #{test_dicepool.sxp} #{test_dicepool.gxp} #{test_dicepool.wxp} #{test_dicepool.wp}"
