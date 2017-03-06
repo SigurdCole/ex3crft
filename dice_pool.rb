@@ -57,6 +57,7 @@ class DicePool
 	end
 
 	def cost
+		@gxp += 10 # flat cost per roll
 		@motes += @excellency
 		@motes += 6 if charms[:fhm]
 		@motes += 6 if charms[:fhm2]
