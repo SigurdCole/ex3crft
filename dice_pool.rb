@@ -11,6 +11,12 @@ class DicePool
 		@stats[:craft]||= 1
 		@stats[:base_pool] ||= @stats[:intelligence] + @stats[:craft]
 		@charms.default = false
+		if @charms[:craft][:smf3]
+			@charms[:craft][:smf2] = true
+			end
+		if @charms[:craft][:smf2]
+			@charms[:craft][:smf] = true
+			end
 		@excellency = @stats[:intelligence] + @stats[:craft]
 		@rerolls = Array.new
 		@pool = Array.new
