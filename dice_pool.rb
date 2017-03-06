@@ -41,47 +41,47 @@ class DicePool
 	end
 
 	def base_pool=(base)
-		if @charms[:excellency]
+		if @charms[:craft][:excellency]
 			base += excellency
 		end
 		log "base_pool = #{base} including excellency"
 		base.downto(1) do 
 			add_die
 		end
-		uif if @charms[:uif]
+		uif if @charms[:craft][:uif]
 		charmset
-		ecottv if @charms[:ecottv]
-		dit if @charms[:dit]
-		@total_successes += @uif if @charms[:uif]
+		ecottv if @charms[:craft][:ecottv]
+		dit if @charms[:craft][:dit]
+		@total_successes += @uif if @charms[:craft][:uif]
 		cost
 	end
 
 	def cost
 		@gxp += 10 # flat cost per roll
 		@motes += @excellency
-		@motes += 6 if charms[:fhm]
-		@motes += 6 if charms[:fhm2]
-		if charms[:smf3]
+		@motes += 6 if @charms[:craft][:fhm]
+		@motes += 6 if @charms[:craft][:fhm2]
+		if @charms[:craft][:smf3]
 			@motes += 2
 			@wxp += 1
-			elsif charms[:smf2]
+			elsif @charms[:craft][:smf2]
 			@motes += 5
 			@wp += 1
 			@gxp += 1
 		end
-		if charms[:ecottv]
+		if @charms[:craft][:ecottv]
 			@motes += 4
 			@gxp += 4
 		end
-		if charms[:uif]
+		if @charms[:craft][:uif]
 			@motes += 3 * @uif
 			@gxp += @uif
 		end
-		if charms[:mem]
+		if @charms[:craft][:mem]
 			@sxp += @stats[:craft]
 			@wxp += 1
 		end
-		if charms[:irv]
+		if @charms[:craft][:irv]
 			@motes += 12
 			@wp += 1
 			@wxp += 1
@@ -90,7 +90,7 @@ class DicePool
 
 	def excellency
 		dice = @excellency
-		if charms[:mem]
+		if @charms[:craft][:mem]
 			dice += @stats[:craft]
 		end
 		return dice
@@ -99,7 +99,7 @@ class DicePool
 	def dit
 		log "total before DIT = #{@total_successes}"
 		pre_successes = @total_successes
-		used_hmu = !@charms[:hmu]
+		used_hmu = !@charms[:craft][:hmu]
 		new_dice = pre_successes / 3
 		used_succ = new_dice * 3
 		log "used hmu = #{used_hmu}"
@@ -127,7 +127,7 @@ class DicePool
 	def charmset
 		while fmotd 
 			fhm
-		end if @charms[:fmotd]
+		end if @charms[:craft][:fmotd]
 		fhm
 	end
 
@@ -152,8 +152,8 @@ class DicePool
 	def fhm
 		reroll_dice = []
 		loop do
-			reroll_dice += @showing[10] if (@charms[:fhm] && @showing[10])
-			reroll_dice += @showing[6]  if (@charms[:fhm2] && @showing[6])
+			reroll_dice += @showing[10] if (@charms[:craft][:fhm] && @showing[10])
+			reroll_dice += @showing[6]  if (@charms[:craft][:fhm2] && @showing[6])
 			log "fhm reroll_dice = #{reroll_dice.to_s}" unless reroll_dice == []
 			break if reroll_dice.count == 0
 			reroll_dice.each { |die| reroll(die)  }
@@ -214,11 +214,11 @@ class DicePool
 	def update_success(face)
 		case face
 		when 7
-			@charms[:smf3] ? @total_successes += 2 : @total_successes += 1
+			@charms[:craft][:smf3] ? @total_successes += 2 : @total_successes += 1
 		when 8
-			@charms[:smf2] ? @total_successes += 2 : @total_successes += 1
+			@charms[:craft][:smf2] ? @total_successes += 2 : @total_successes += 1
 		when 9
-			if @charms[:smf]
+			if @charms[:craft][:smf]
 				@total_successes += 2
 			else
 				@total_successes += 1
