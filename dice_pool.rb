@@ -11,6 +11,19 @@ class DicePool
 		@stats[:craft]||= 1
 		@stats[:base_pool] ||= @stats[:intelligence] + @stats[:craft]
 		@charms.default = false
+		@charms[:craft][:excellency] ||= false
+		@charms[:craft][:ecottv] ||= false
+		@charms[:craft][:fhm] ||= false
+		@charms[:craft][:fhm2] ||= false
+		@charms[:craft][:smf] ||= false
+		@charms[:craft][:smf2] ||= false
+		@charms[:craft][:smf3] ||= false
+		@charms[:craft][:fmotd] ||= false
+		@charms[:craft][:uif] ||= false
+		@charms[:craft][:mem] ||= false
+		@charms[:craft][:dit] ||= false
+		@charms[:craft][:hmu] ||= false
+		@charms[:craft][:irv] ||= false
 		if @charms[:craft][:smf3]
 			@charms[:craft][:smf2] = true
 			end
