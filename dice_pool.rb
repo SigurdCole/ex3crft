@@ -11,6 +11,7 @@ class DicePool
 		@stats[:craft]||= 1
 		@stats[:base_pool] ||= @stats[:intelligence] + @stats[:craft]
 		@charms.default = false
+		@charms[:craft].default = false
 		@charms[:craft][:excellency] ||= false
 		@charms[:craft][:ecottv] ||= false
 		@charms[:craft][:fhm] ||= false
@@ -30,8 +31,11 @@ class DicePool
 		if @charms[:craft][:smf2]
 			@charms[:craft][:smf] = true
 			end
-		@excellency = @stats[:intelligence] + @stats[:craft]
-		@rerolls = Array.new
+		if @charms[:craft].any? {|k| puts k}
+			@charms[:craft][:excellency] = true
+			end
+		@excellency = @stats[:intelligence] + @stats[:craft] # defines the Excellency pool; whether or not it's available is elsewhere
+		@rerolls = Array.new # rerolled dice go here
 		@pool = Array.new
 		@showing = Hash.new
 		@used_successes = Array.new
