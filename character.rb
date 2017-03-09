@@ -6,6 +6,9 @@ class Character
   def initialize(charms = Hash.new, stats = Hash.new)
     charms.is_a?(Hash) ? @charms = charms : @charms = Hash.new
     stats.is_a?(Hash) ? @stats = stats : @stats = Hash.new
+	if @charms[:craft].has_value?(true)
+		@charms[:craft][:excellency] = true
+		end
     @essence = stats[:essence] ||= 1
     @intelligence = stats[:intelligence] ||= 1
     @craft = stats[:craft] ||= 1

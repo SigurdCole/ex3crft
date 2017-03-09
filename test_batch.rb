@@ -1,7 +1,7 @@
 require "./character.rb"
 require "./dice_pool.rb"
 
-charms = {:craft => {:fhm => true, :tfe => true}}
+charms = {:craft => {:fhm => true, :tfe => false}}
 
 stats = {:essence => 3, :intelligence => 4, :craft => 5, :sxp => 11, :gxp => 12, :wxp => 13, :wp => 6, :hl0 => 1, :hl1 => 2, :hl2 => 2, :hl4 => 1, :log => true}
 
